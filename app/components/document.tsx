@@ -21,7 +21,7 @@ export default function Document({
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-gray-400">
         {children}
         <ScrollRestoration />
         <Scripts />

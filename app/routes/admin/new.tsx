@@ -1,7 +1,7 @@
 import { ActionFunction, useTransition } from "remix"
 import { Form, useActionData, redirect } from "remix";
 import invariant from "tiny-invariant";
-import { createRecipe } from "~/services/recipe-service";
+// import { createRecipe } from "~/services/recipe-service";
 
 type PostError = {
   title?: boolean
@@ -30,7 +30,7 @@ export const action: ActionFunction = async ({ request }) => {
   invariant(typeof title === "string")
   invariant(typeof slug === "string")
   invariant(typeof markdown === "string")
-  await createRecipe({ title, slug, markdown })
+  // await createRecipe({ title, slug, markdown })
 
   return redirect("/admin")
 }

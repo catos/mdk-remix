@@ -3,10 +3,10 @@ import Logo from "./logo";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-4 items-center mt-8 py-8 bg-gray-200">
+    <footer className="flex flex-col gap-4 items-center py-8 bg-gray-100">
       <section className="container mx-auto text-center">
         <Logo />
-        <p className="text-xl leading-tight">
+        <p className="mt-4 leading-tight">
           Lorem ipsum dolor amet consectetur, adipisicing elit. Illo maiores
           iure in vitae iusto fuga ratione?
         </p>

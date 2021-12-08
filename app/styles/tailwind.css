@@ -18,7 +18,7 @@
     @apply text-xl text-gray-800 pb-2;
   }
   a {
-    @apply text-blue-900 hover:underline;
+    @apply text-blue-700 hover:underline;
   }
 }
 
@@ -66,5 +66,9 @@
       bg-secondary-500 
       hover:bg-secondary-600 
       focus:ring-secondary-600;
+  }
+
+  .error-container {
+    @apply bg-red-200 p-4 text-xl text-red-900 border border-red-400 rounded my-4 mx-auto w-11/12 md:w-2/3
   }
 }

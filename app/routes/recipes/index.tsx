@@ -1,22 +1,23 @@
 import type { LoaderFunction } from "remix"
-import { Link, useLoaderData } from "remix"
-import { getRecipes, Recipe } from "~/services/recipe-service"
+import { useLoaderData } from "remix"
+import { getRecipes, IRecipe } from "~/firebase/recipe-service"
+import RecipeCard from "~/components/recipe-card"
 
 export const loader: LoaderFunction = () => {
-  return getRecipes()
+  return getRecipes(12)
 }
 
 export default function Recipes() {
-  const recipes = useLoaderData<Recipe[]>()
-  
+  const recipes = useLoaderData<IRecipe[]>()
+
   return (
-    <div className="container mx-auto p-4">
-      <h1>Recipes</h1>
-      <ul>
+    <div className="container mx-auto px-4 sm:px-0">
+      <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
         {recipes.map(recipe => (
-          <li key={recipe.slug}><Link to={recipe.slug}>{recipe.title}</Link></li>
+          <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
+
