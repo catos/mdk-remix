@@ -3,6 +3,7 @@ import { Link, Outlet, useLoaderData } from "remix"
 import { getRecipes, IRecipe } from "~/firebase/recipe-service"
 
 export const loader: LoaderFunction = () => {
+  // TODO: load more than 20 recipes...
   return getRecipes(50)
 }
 
