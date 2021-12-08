@@ -1,11 +1,9 @@
-type LogoProps = {
-  primary?: string
-  secondary?: string
-}
+const primary = "#F36A3E"
+const secondary = "#FFB30B"
 
-export default function Logo({ primary = "#F36A3E", secondary = "#FFB30B" }: LogoProps) {
+export default function Logo() {
   return (
-    <svg className="inline-block" viewBox="0 0 81 81" version="1.1" style={{ width: "2rem", height: "2rem" }}>
+    <svg viewBox="0 0 81 81" version="1.1" className="inline-block w-8 h-8">
       <g transform="matrix(0.449977,-0.449977,0.449977,0.449977,-2128.39,1925.9)">
         <g transform="matrix(1,0,0,1,3940,-1120.56)">
           <path
@@ -33,5 +31,5 @@ export default function Logo({ primary = "#F36A3E", secondary = "#FFB30B" }: Log
         </g>
       </g>
     </svg>
-  );
+  )
 }

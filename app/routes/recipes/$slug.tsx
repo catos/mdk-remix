@@ -11,8 +11,7 @@ export default function Recipe() {
   const recipe = useLoaderData<Recipe>()
 
   return (
-    <div>
-      {/* <h1>{recipe.title}</h1> */}
+    <div className="container mx-auto p-4">
       <div dangerouslySetInnerHTML={{__html: recipe.html}} />
     </div>
   )

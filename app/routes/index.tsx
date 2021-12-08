@@ -59,8 +59,8 @@ export default function Index() {
   let data = useLoaderData<IndexData>();
 
   return (
-    <div className="remix__page">
-      <main>
+    <div className="container mx-auto p-4">
+      <section>
         <h2>Welcome to Remix!</h2>
         <p>We're stoked that you're here. 🥳</p>
         <p>
@@ -74,7 +74,7 @@ export default function Index() {
           <code>app/routes/demos</code> and <code>app/styles/demos</code>{" "}
           folders when you're ready to turn this into your next project.
         </p>
-      </main>
+      </section>
       <aside>
         <h2>Resources</h2>
         <ul>

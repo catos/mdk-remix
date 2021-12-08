@@ -10,7 +10,7 @@ export default function Recipes() {
   const recipes = useLoaderData<Recipe[]>()
   
   return (
-    <div>
+    <div className="container mx-auto p-4">
       <h1>Recipes</h1>
       <ul>
         {recipes.map(recipe => (

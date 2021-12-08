@@ -10,8 +10,8 @@ export default function Admin() {
   const recipes = useLoaderData<Recipe[]>()
 
   return (
-    <div className="admin">
-      <nav>
+    <div className="container mx-auto p-4 flex gap-4">
+      <nav className="border-r border-gray-600 pr-4">
         <h1>Admin</h1>
         <ul>
           {recipes.map(recipe => (
@@ -23,9 +23,9 @@ export default function Admin() {
           ))}
         </ul>
       </nav>
-      <main>
+      <div className="flex-1">
         <Outlet />
-      </main>
+      </div>
     </div>
   )
 }

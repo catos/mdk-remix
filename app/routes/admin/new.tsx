@@ -40,31 +40,26 @@ export default function NewPost() {
   const transition = useTransition()
 
   return (
-    <Form method="post">
-      <p>
-        <label htmlFor="title">
-          Title:
-          {errors?.title && <em>Title is required</em>}
-          <input type="text" id="title" name="title" />
-        </label>
-      </p>
-      <p>
-        <label>
-          {errors?.slug && <em>Slug is required</em>}
-          Slug: <input type="text" name="slug" />
-        </label>
-      </p>
-      <p>
-        <label htmlFor="markdown">Markdown:</label>
-        {errors?.markdown && <em>Markdown is required</em>}
-        <br />
-        <textarea id="markdown" rows={20} name="markdown" />
-      </p>
-      <p>
-        <button type="submit">
-          {transition.submission ? "Lagrer..." : "Lagre"}
-        </button>
-      </p>
+    <Form method="post" className="flex flex-col gap-4">
+      <label className="label" htmlFor="title">
+        Title:
+        <input className="input" type="text" id="title" name="title" />
+        {errors?.title && <div>Title is required</div>}
+      </label>
+
+      <label className="label">
+        Slug: <input className="input" type="text" name="slug" />
+        {errors?.slug && <div>Slug is required</div>}
+      </label>
+
+      <label className="label" htmlFor="markdown">Markdown:
+        <textarea className="input h-20" id="markdown" rows={20} name="markdown" />
+        {errors?.markdown && <div>Markdown is required</div>}
+      </label>
+
+      <button className="button" type="submit">
+        {transition.submission ? "Lagrer..." : "Lagre"}
+      </button>
     </Form>
   )
 }
