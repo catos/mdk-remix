@@ -1,6 +1,6 @@
 import type { LoaderFunction } from "remix"
 import { useLoaderData } from "remix"
-import { getRecipes, IRecipe } from "~/firebase/recipe-service"
+import { getRecipes, IRecipe } from "~/firebase/recipe-service.server"
 import RecipeCard from "~/components/recipe-card"
 
 export const loader: LoaderFunction = () => {

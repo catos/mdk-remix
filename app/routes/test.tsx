@@ -58,7 +58,7 @@ export default function Test() {
   })
 
   return (
-    <div className="container mx-auto px-4 sm:px-0">
+    <div className="container mx-auto sm:px-0">
       <h1>Test</h1>
 
       <pre className="my-4">{md}</pre>

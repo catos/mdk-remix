@@ -59,7 +59,7 @@ export default function Index() {
   let data = useLoaderData<IndexData>();
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto">
       <section>
         <h2>Welcome to Remix!</h2>
         <p>We're stoked that you're here. 🥳</p>

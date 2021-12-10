@@ -2,7 +2,7 @@ import type { LoaderFunction } from "remix"
 import { Form, useLoaderData, useTransition } from "remix"
 import invariant from "tiny-invariant"
 import Input from "~/components/ui/input"
-import { getRecipe, IRecipe } from "~/firebase/recipe-service"
+import { getRecipe, IRecipe } from "~/firebase/recipe-service.server"
 
 export const loader: LoaderFunction = async ({ params }) => {
   invariant(params.slug, "expected params.slug")

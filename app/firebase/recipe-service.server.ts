@@ -29,8 +29,6 @@ export interface IRecipe {
 }
 
 export async function getRecipes(take = 10) {
-  console.log(take);
-  
   const q = query(
     collection(db, "recipes"),
     // TODO: where("published", "==" , true)

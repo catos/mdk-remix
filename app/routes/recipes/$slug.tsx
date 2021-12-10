@@ -1,6 +1,6 @@
 import { Link, LoaderFunction, useCatch, useLoaderData, useParams } from "remix"
 import invariant from "tiny-invariant"
-import { getRecipe, IRecipe } from "~/firebase/recipe-service"
+import { getRecipe, IRecipe } from "~/firebase/recipe-service.server"
 
 export const loader: LoaderFunction = async ({ params }) => {
   invariant(params.slug, "expected params.slug")

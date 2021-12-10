@@ -1,19 +1,20 @@
 import type { LoaderFunction } from "remix"
 import { Link, Outlet, useLoaderData } from "remix"
-import { getRecipes, IRecipe } from "~/firebase/recipe-service"
+import { getRecipes, IRecipe } from "~/firebase/recipe-service.server"
+import { requireUserId } from "~/firebase/session.server"
 
-export const loader: LoaderFunction = () => {
+export const loader: LoaderFunction = async ({ request }) => {
+  await requireUserId(request)
+  
   // TODO: load more than 20 recipes...
   return getRecipes(50)
 }
 
 export default function Admin() {
   const recipes = useLoaderData<IRecipe[]>()
-  console.log(recipes.length);
-  
 
   return (
-    <div className="container mx-auto p-4 flex gap-4">
+    <div className="container mx-auto flex gap-4">
       <nav className="border-r border-gray-600 pr-4">
         <h1>Admin</h1>
         <ul>

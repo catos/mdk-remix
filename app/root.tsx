@@ -1,21 +1,30 @@
-import { Outlet, useCatch } from "remix";
-import type { LinksFunction } from "remix";
+import type { LinksFunction, LoaderFunction } from "remix";
+import { Outlet, useCatch, useLoaderData } from "remix";
 
 import styles from "./styles/styles.css"
+import { getUser } from "./firebase/session.server";
 import Layout from "./components/layout";
 import Document from "./components/document"
 
 // https://remix.run/api/app#links
-export let links: LinksFunction = () => {
+export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
+};
+
+export const loader: LoaderFunction = async ({ request }) => {
+  const user = await getUser(request)
+  // https://remix.run/api/remix#json
+  return user
 };
 
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
 export default function App() {
+  const user = useLoaderData()
+  
   return (
     <Document>
-      <Layout>
+      <Layout user={user}>
         <Outlet />
       </Layout>
     </Document>
@@ -44,7 +53,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
 
 // https://remix.run/docs/en/v1/api/conventions#catchboundary
 export function CatchBoundary() {
-  let caught = useCatch();
+  const caught = useCatch();
 
   let message;
   switch (caught.status) {

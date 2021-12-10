@@ -9,6 +9,7 @@ module.exports = {
   devServerPort: 8002,
   routes(defineRoutes) {
     return defineRoutes(route => {
+      route("/logg-inn", "routes/login.tsx")
       route("/oppskrifter", "routes/recipes/index.tsx")
       route("/oppskrifter/:slug", "routes/recipes/$slug.tsx")
     })
