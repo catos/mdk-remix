@@ -1,5 +1,7 @@
+import Markdown from "markdown-to-jsx"
 import { Link, LoaderFunction, useCatch, useLoaderData, useParams } from "remix"
 import invariant from "tiny-invariant"
+import RecipeMarkdown from "~/components/recipe/markdown"
 import { getRecipe, IRecipe } from "~/firebase/recipe-service.server"
 
 export const loader: LoaderFunction = async ({ params }) => {
@@ -89,7 +91,7 @@ export default function Recipe() {
 
       {recipe.description ? (
         <section className="hidden lg:block container mx-auto px-4 sm:px-0 bg-white text-center">
-          <div dangerouslySetInnerHTML={{ __html: recipe.description }} />
+          <RecipeMarkdown markdown={recipe.description} />
         </section>
       ) : null}
 
@@ -99,14 +101,14 @@ export default function Recipe() {
           <div className="p-2 text-lg uppercase bg-gray-100 text-gray-600">
             Ingredienser
           </div>
-          <div dangerouslySetInnerHTML={{ __html: recipe.ingredients }} />
+          <RecipeMarkdown markdown={recipe.ingredients} />
         </div>
 
         <div className="sm:w-1/2 xl:w-7/12">
           <div className="p-2 text-lg uppercase bg-gray-100 text-gray-600">
             Fremgangsmåte
-          </div>          
-          <div dangerouslySetInnerHTML={{ __html: recipe.steps }} />
+          </div>
+          <RecipeMarkdown markdown={recipe.steps} />
         </div>
       </section>
     </>

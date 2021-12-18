@@ -7,8 +7,6 @@ import {
   orderBy,
   query,
 } from "firebase/firestore"
-import { marked } from "marked"
-import recipeRenderer from "~/lib/recipe-renderer"
 import slugify from "~/lib/slugify"
 import { db } from "./firebase"
 
@@ -65,16 +63,5 @@ export async function getRecipe(id: string, rendered = true) {
     ...dbRecipe,
   } as IRecipe
 
-  return rendered
-    ? {
-        ...recipe,
-        description: marked(dbRecipe.description, {
-          renderer: recipeRenderer(),
-        }),
-        ingredients: marked(dbRecipe.ingredients, {
-          renderer: recipeRenderer(),
-        }),
-        steps: marked(dbRecipe.steps, { renderer: recipeRenderer() }),
-      }
-    : recipe
+  return recipe
 }
