@@ -6,7 +6,6 @@ module.exports = {
   browserBuildDirectory: "public/build",
   publicPath: "/build/",
   serverBuildDirectory: "api/_build",
-  devServerPort: 8002,
   ignoredRouteFiles: [".*"],
   routes(defineRoutes) {
     return defineRoutes(route => {
