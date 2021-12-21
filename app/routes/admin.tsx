@@ -1,6 +1,6 @@
 import type { LoaderFunction } from "remix"
 import { Link, Outlet, useLoaderData } from "remix"
-import { getRecipes, IRecipe } from "~/firebase/recipe-service.server"
+import { getRecipes, IRecipe } from "~/firebase/recipe-service"
 import { requireUserId } from "~/firebase/session.server"
 
 export const loader: LoaderFunction = async ({ request }) => {

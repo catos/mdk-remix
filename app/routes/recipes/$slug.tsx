@@ -2,7 +2,7 @@ import Markdown from "markdown-to-jsx"
 import { Link, LoaderFunction, useCatch, useLoaderData, useParams } from "remix"
 import invariant from "tiny-invariant"
 import RecipeMarkdown from "~/components/recipe/markdown"
-import { getRecipe, IRecipe } from "~/firebase/recipe-service.server"
+import { getRecipe, IRecipe } from "~/firebase/recipe-service"
 
 export const loader: LoaderFunction = async ({ params }) => {
   invariant(params.slug, "expected params.slug")

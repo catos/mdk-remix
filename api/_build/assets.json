@@ -1,18 +1,18 @@
 {
-  "version": "58fb73a9",
+  "version": "949a7300",
   "entry": {
-    "module": "/build/entry.client-ZB4Q22ZN.js",
+    "module": "/build/entry.client-B4H65VMB.js",
     "imports": [
-      "/build/_shared/chunk-4C6GMSXO.js",
-      "/build/_shared/chunk-JKO55VJE.js",
-      "/build/_shared/chunk-AKSB5QXU.js"
+      "/build/_shared/chunk-WCIUZ54Y.js",
+      "/build/_shared/chunk-PRMZXFLO.js",
+      "/build/_shared/chunk-E7VMOUYL.js"
     ]
   },
   "routes": {
     "root": {
       "id": "root",
       "path": "",
-      "module": "/build/root-TIYRS726.js",
+      "module": "/build/root-CTTXZK7E.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": true,
@@ -22,10 +22,9 @@
       "id": "routes/admin",
       "parentId": "root",
       "path": "admin",
-      "module": "/build/routes/admin-2D6R75YF.js",
+      "module": "/build/routes/admin-3AAVQV5D.js",
       "imports": [
-        "/build/_shared/chunk-6GUDLLZC.js",
-        "/build/_shared/chunk-2T4T5P7P.js"
+        "/build/_shared/chunk-SYMSSBII.js"
       ],
       "hasAction": false,
       "hasLoader": true,
@@ -36,9 +35,9 @@
       "id": "routes/admin/$slug",
       "parentId": "routes/admin",
       "path": ":slug",
-      "module": "/build/routes/admin/$slug-FJ7MJOXQ.js",
+      "module": "/build/routes/admin/$slug-QARW3YFV.js",
       "imports": [
-        "/build/_shared/chunk-IXDXJQLU.js"
+        "/build/_shared/chunk-W4Y54RI7.js"
       ],
       "hasAction": false,
       "hasLoader": true,
@@ -49,7 +48,7 @@
       "id": "routes/admin/index",
       "parentId": "routes/admin",
       "index": true,
-      "module": "/build/routes/admin/index-4TA542SY.js",
+      "module": "/build/routes/admin/index-XZM3CFOQ.js",
       "hasAction": false,
       "hasLoader": false,
       "hasCatchBoundary": false,
@@ -59,9 +58,9 @@
       "id": "routes/admin/new",
       "parentId": "routes/admin",
       "path": "new",
-      "module": "/build/routes/admin/new-FROZ4FXM.js",
+      "module": "/build/routes/admin/new-XLEX6ZJO.js",
       "imports": [
-        "/build/_shared/chunk-HL7OVJR6.js"
+        "/build/_shared/chunk-HRKCOKS3.js"
       ],
       "hasAction": true,
       "hasLoader": false,
@@ -72,7 +71,7 @@
       "id": "routes/index",
       "parentId": "root",
       "index": true,
-      "module": "/build/routes/index-BBCGDHIF.js",
+      "module": "/build/routes/index-Z22SEFAH.js",
       "hasAction": false,
       "hasLoader": false,
       "hasCatchBoundary": false,
@@ -82,10 +81,10 @@
       "id": "routes/login",
       "parentId": "root",
       "path": "/logg-inn",
-      "module": "/build/routes/login-JP5BRHGA.js",
+      "module": "/build/routes/login-BD4CD4L7.js",
       "imports": [
-        "/build/_shared/chunk-6GUDLLZC.js",
-        "/build/_shared/chunk-IXDXJQLU.js"
+        "/build/_shared/chunk-SYMSSBII.js",
+        "/build/_shared/chunk-W4Y54RI7.js"
       ],
       "hasAction": true,
       "hasLoader": false,
@@ -96,10 +95,10 @@
       "id": "routes/logout",
       "parentId": "root",
       "path": "logout",
-      "module": "/build/routes/logout-2MANY4EI.js",
+      "module": "/build/routes/logout-VRHRKNQU.js",
       "imports": [
-        "/build/_shared/chunk-HL7OVJR6.js",
-        "/build/_shared/chunk-6GUDLLZC.js"
+        "/build/_shared/chunk-HRKCOKS3.js",
+        "/build/_shared/chunk-SYMSSBII.js"
       ],
       "hasAction": true,
       "hasLoader": true,
@@ -110,10 +109,7 @@
       "id": "routes/recipes/$slug",
       "parentId": "root",
       "path": "/oppskrifter/:slug",
-      "module": "/build/routes/recipes/$slug-N3FOTY4K.js",
-      "imports": [
-        "/build/_shared/chunk-2T4T5P7P.js"
-      ],
+      "module": "/build/routes/recipes/$slug-OXMO6FCO.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": true,
@@ -123,15 +119,12 @@
       "id": "routes/recipes/index",
       "parentId": "root",
       "path": "/oppskrifter",
-      "module": "/build/routes/recipes/index-EL6FTEBS.js",
-      "imports": [
-        "/build/_shared/chunk-2T4T5P7P.js"
-      ],
+      "module": "/build/routes/recipes/index-LZJ35CFM.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": false,
       "hasErrorBoundary": false
     }
   },
-  "url": "/build/manifest-58FB73A9.js"
+  "url": "/build/manifest-949A7300.js"
 }
