@@ -40,16 +40,16 @@ export async function login({ username, password }: LoginForm) {
   return user
 }
 
-const sessionSecret = process.env.SESSION_SECRET
-if (!sessionSecret) {
-  throw new Error("SESSION_SECRET must be set")
-}
+// const sessionSecret = process.env.SESSION_SECRET
+// if (!sessionSecret) {
+//   throw new Error("SESSION_SECRET must be set")
+// }
 
 const storage = createCookieSessionStorage({
   cookie: {
     name: "RJ_session",
     secure: true,
-    secrets: [sessionSecret],
+    secrets: ["weee1234weee"],
     sameSite: "lax",
     path: "/",
     maxAge: 60 * 60 * 24 * 30,

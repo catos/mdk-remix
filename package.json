@@ -4,9 +4,9 @@
   "description": "",
   "license": "",
   "scripts": {
-    "build": "yarn run build:css && remix build",
+    "build": "remix build",
     "build:css": "tailwindcss -i ./app/styles/tailwind.css -o ./app/styles/styles.css",
-    "dev": "concurrently \"yarn run dev:css\" \"node -r dotenv/config node_modules/.bin/remix dev\"",
+    "dev": "remix dev",
     "dev:css": "tailwindcss -i ./app/styles/tailwind.css -o ./app/styles/styles.css --watch",
     "postinstall": "remix setup node",
     "start": "remix-serve build"
