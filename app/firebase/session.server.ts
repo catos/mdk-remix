@@ -5,7 +5,7 @@ import {
   signOut,
   onAuthStateChanged,
   User,
-} from "@firebase/auth"
+} from "firebase/auth"
 import { auth } from "./firebase"
 
 type LoginForm = {
