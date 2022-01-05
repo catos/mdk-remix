@@ -1,18 +1,18 @@
 {
-  "version": "7e3c2c51",
+  "version": "856f9974",
   "entry": {
-    "module": "/build/entry.client-IQF3OPF5.js",
+    "module": "/build/entry.client-ZB4Q22ZN.js",
     "imports": [
-      "/build/_shared/chunk-RFZ5VAAA.js",
-      "/build/_shared/chunk-A7HUMUCP.js",
-      "/build/_shared/chunk-E7VMOUYL.js"
+      "/build/_shared/chunk-4C6GMSXO.js",
+      "/build/_shared/chunk-JKO55VJE.js",
+      "/build/_shared/chunk-AKSB5QXU.js"
     ]
   },
   "routes": {
     "root": {
       "id": "root",
       "path": "",
-      "module": "/build/root-ODK63VDN.js",
+      "module": "/build/root-TIYRS726.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": true,
@@ -22,9 +22,9 @@
       "id": "routes/admin",
       "parentId": "root",
       "path": "admin",
-      "module": "/build/routes/admin-GXCSE4D4.js",
+      "module": "/build/routes/admin-3YQ6JRXB.js",
       "imports": [
-        "/build/_shared/chunk-SYMSSBII.js"
+        "/build/_shared/chunk-6GUDLLZC.js"
       ],
       "hasAction": false,
       "hasLoader": true,
@@ -35,9 +35,9 @@
       "id": "routes/admin/$slug",
       "parentId": "routes/admin",
       "path": ":slug",
-      "module": "/build/routes/admin/$slug-WK2FGH2U.js",
+      "module": "/build/routes/admin/$slug-JTGJK45C.js",
       "imports": [
-        "/build/_shared/chunk-W4Y54RI7.js"
+        "/build/_shared/chunk-IXDXJQLU.js"
       ],
       "hasAction": false,
       "hasLoader": true,
@@ -48,7 +48,7 @@
       "id": "routes/admin/index",
       "parentId": "routes/admin",
       "index": true,
-      "module": "/build/routes/admin/index-B2VPJJMA.js",
+      "module": "/build/routes/admin/index-4TA542SY.js",
       "hasAction": false,
       "hasLoader": false,
       "hasCatchBoundary": false,
@@ -58,9 +58,9 @@
       "id": "routes/admin/new",
       "parentId": "routes/admin",
       "path": "new",
-      "module": "/build/routes/admin/new-VMPCXODT.js",
+      "module": "/build/routes/admin/new-FROZ4FXM.js",
       "imports": [
-        "/build/_shared/chunk-IPERP6AS.js"
+        "/build/_shared/chunk-HL7OVJR6.js"
       ],
       "hasAction": true,
       "hasLoader": false,
@@ -71,7 +71,7 @@
       "id": "routes/canvas",
       "parentId": "root",
       "path": "canvas",
-      "module": "/build/routes/canvas-QQ4T46IL.js",
+      "module": "/build/routes/canvas-577C4VOK.js",
       "hasAction": false,
       "hasLoader": false,
       "hasCatchBoundary": false,
@@ -81,7 +81,7 @@
       "id": "routes/index",
       "parentId": "root",
       "index": true,
-      "module": "/build/routes/index-Z22SEFAH.js",
+      "module": "/build/routes/index-BBCGDHIF.js",
       "hasAction": false,
       "hasLoader": false,
       "hasCatchBoundary": false,
@@ -91,10 +91,10 @@
       "id": "routes/login",
       "parentId": "root",
       "path": "/logg-inn",
-      "module": "/build/routes/login-PG436C5V.js",
+      "module": "/build/routes/login-JP5BRHGA.js",
       "imports": [
-        "/build/_shared/chunk-SYMSSBII.js",
-        "/build/_shared/chunk-W4Y54RI7.js"
+        "/build/_shared/chunk-6GUDLLZC.js",
+        "/build/_shared/chunk-IXDXJQLU.js"
       ],
       "hasAction": true,
       "hasLoader": false,
@@ -105,10 +105,10 @@
       "id": "routes/logout",
       "parentId": "root",
       "path": "logout",
-      "module": "/build/routes/logout-TWRH6XHM.js",
+      "module": "/build/routes/logout-2MANY4EI.js",
       "imports": [
-        "/build/_shared/chunk-IPERP6AS.js",
-        "/build/_shared/chunk-SYMSSBII.js"
+        "/build/_shared/chunk-HL7OVJR6.js",
+        "/build/_shared/chunk-6GUDLLZC.js"
       ],
       "hasAction": true,
       "hasLoader": true,
@@ -119,7 +119,7 @@
       "id": "routes/recipes/$slug",
       "parentId": "root",
       "path": "/oppskrifter/:slug",
-      "module": "/build/routes/recipes/$slug-RAJCSXW5.js",
+      "module": "/build/routes/recipes/$slug-Q3UQEGUI.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": true,
@@ -129,12 +129,12 @@
       "id": "routes/recipes/index",
       "parentId": "root",
       "path": "/oppskrifter",
-      "module": "/build/routes/recipes/index-EDE5Z2MX.js",
+      "module": "/build/routes/recipes/index-QTOIBMFN.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": false,
       "hasErrorBoundary": false
     }
   },
-  "url": "/build/manifest-7E3C2C51.js"
+  "url": "/build/manifest-856F9974.js"
 }
