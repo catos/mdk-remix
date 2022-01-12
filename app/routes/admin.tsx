@@ -1,17 +1,15 @@
+import { Recipe } from "@prisma/client"
 import type { LoaderFunction } from "remix"
 import { Link, Outlet, useLoaderData } from "remix"
-import { getRecipes, IRecipe } from "~/firebase/recipe-service"
-import { requireUserId } from "~/firebase/session.server"
+import { db } from "../../prisma/db.server"
 
 export const loader: LoaderFunction = async ({ request }) => {
-  await requireUserId(request)
-  
-  // TODO: load more than 20 recipes...
-  return getRecipes(50)
+  // TODO await requireUserId(request)
+  return await db.recipe.findMany()  
 }
 
 export default function Admin() {
-  const recipes = useLoaderData<IRecipe[]>()
+  const recipes = useLoaderData<Recipe[]>()
 
   return (
     <div className="container mx-auto flex gap-4">

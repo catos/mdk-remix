@@ -1,10 +1,10 @@
+import { Recipe } from "@prisma/client";
 import { Link } from "remix";
-import { IRecipe } from "~/firebase/recipe-service";
 
-export default function RecipeCard({ recipe }: { recipe: IRecipe }) {
+export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
     <Link
-      to={recipe.id}
+      to={recipe.id.toString()}
       className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg"
     >
       <img

@@ -2,7 +2,6 @@ import type { LinksFunction, LoaderFunction } from "remix";
 import { Outlet, useCatch, useLoaderData } from "remix";
 
 import styles from "./styles/styles.css"
-import { getUser } from "./firebase/session.server";
 import Layout from "./components/layout";
 import Document from "./components/document"
 
@@ -12,9 +11,9 @@ export const links: LinksFunction = () => {
 };
 
 export const loader: LoaderFunction = async ({ request }) => {
-  const user = await getUser(request)
+  // const user = await getUser(request)
   // https://remix.run/api/remix#json
-  return user
+  return null
 };
 
 // https://remix.run/api/conventions#default-export

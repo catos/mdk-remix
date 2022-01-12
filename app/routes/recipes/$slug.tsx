@@ -2,20 +2,22 @@
 import { Link, LoaderFunction, useCatch, useLoaderData, useParams } from "remix"
 import invariant from "tiny-invariant"
 // import RecipeMarkdown from "~/components/recipe/markdown"
-import { getRecipe, IRecipe } from "~/firebase/recipe-service"
+import { db } from "../../../prisma/db.server"
+import { Recipe } from "@prisma/client"
 
 export const loader: LoaderFunction = async ({ params }) => {
   invariant(params.slug, "expected params.slug")
-  const recipe = await getRecipe(params.slug)
-  if (!recipe) {
-    throw new Response(`No recipe found with id = ${params.slug}`, { status: 404 })
-  }
+  // const recipe = await getRecipe(params.slug)
+  // if (!recipe) {
+  //   throw new Response(`No recipe found with id = ${params.slug}`, { status: 404 })
+  // }
 
-  return recipe
+  // return recipe
+  return await db.recipe.findUnique({ where: { id: parseInt(params.slug) } })
 }
 
 export default function Recipe() {
-  const recipe = useLoaderData<IRecipe>()
+  const recipe = useLoaderData<Recipe>()
 
   return (
     <>
@@ -43,8 +45,15 @@ export default function Recipe() {
             </div>
           </div>
         </div>
-
       </section>
+
+
+      {recipe.description ? (
+        <section className="hidden lg:block container mx-auto px-4 sm:px-0 bg-white text-center">
+          {/* <RecipeMarkdown markdown={recipe.description} /> */}
+          {recipe.description}
+        </section>
+      ) : null}
     </>
   )
 

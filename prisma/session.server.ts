@@ -31,7 +31,7 @@ export async function login({ username, password }: LoginForm) {
   //     err.message
   //   })
   // return user
-  throw new Error("Not implemented!")
+  return null
 }
 
 // TODO: use env again!

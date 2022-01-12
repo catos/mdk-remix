@@ -1,7 +1,7 @@
 import type { ActionFunction } from "remix"
 import { Form, useSearchParams, useTransition } from "remix";
 import Input from "~/components/ui/input";
-import { createUserSession, login } from "~/firebase/session.server";
+import { createUserSession, login } from "../../prisma/session.server";
 
 function validateUsername(username: unknown) {
   if (typeof username !== "string" || username.length < 3) {
