@@ -19,7 +19,7 @@ export default function Admin() {
         <h1>Admin</h1>
         <ul>
           {recipes.map(recipe => (
-            <li key={recipe.slug}>
+            <li key={recipe.id}>
               <Link to={`/admin/${recipe.id}`}>
                 {recipe.name}
               </Link>

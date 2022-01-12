@@ -1,12 +1,4 @@
 import { createCookieSessionStorage, redirect } from "remix"
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
-  User,
-} from "firebase/auth"
-import { auth } from "./firebase"
 
 type LoginForm = {
   username: string
@@ -15,31 +7,34 @@ type LoginForm = {
 
 // TODO: create user in firebase/users
 export async function register({ username, password }: LoginForm) {
-  const user = await createUserWithEmailAndPassword(auth, username, password)
-    .then((userCredential) => userCredential.user)
-    .catch(function (error): any {
-      const errorCode = error.code
-      const errorMessage = error.message
-      if (errorCode == "auth/weak-password") {
-        return "The password is too weak."
-      } else {
-        return errorMessage
-      }
-    })
+  // const user = await createUserWithEmailAndPassword(auth, username, password)
+  //   .then((userCredential) => userCredential.user)
+  //   .catch(function (error): any {
+  //     const errorCode = error.code
+  //     const errorMessage = error.message
+  //     if (errorCode == "auth/weak-password") {
+  //       return "The password is too weak."
+  //     } else {
+  //       return errorMessage
+  //     }
+  //   })
 
-  return user
+  // return user
+  throw new Error("Not implemented!")
 }
 
 export async function login({ username, password }: LoginForm) {
-  const user = await signInWithEmailAndPassword(auth, username, password)
-    .then((userCredential) => userCredential.user)
-    .catch((err) => {
-      err.code
-      err.message
-    })
-  return user
+  // const user = await signInWithEmailAndPassword(auth, username, password)
+  //   .then((userCredential) => userCredential.user)
+  //   .catch((err) => {
+  //     err.code
+  //     err.message
+  //   })
+  // return user
+  throw new Error("Not implemented!")
 }
 
+// TODO: use env again!
 // const sessionSecret = process.env.SESSION_SECRET
 // if (!sessionSecret) {
 //   throw new Error("SESSION_SECRET must be set")
@@ -78,29 +73,31 @@ export async function requireUserId(
 }
 
 // TODO: get user from firebase/users, not auth
-export async function getUser(request: Request): Promise<User | null> {
-  const userId = auth.currentUser?.email
-  if (typeof userId !== "string") {
-    return null
-  }
+export async function getUser(request: Request): Promise<any | null> {
+  // const userId = auth.currentUser?.email
+  // if (typeof userId !== "string") {
+  //   return null
+  // }
 
-  try {
-    const user = auth.currentUser
-    onAuthStateChanged(auth, (user) => user)
-    return user
-  } catch {
-    throw logout(request)
-  }
+  // try {
+  //   const user = auth.currentUser
+  //   onAuthStateChanged(auth, (user) => user)
+  //   return user
+  // } catch {
+  //   throw logout(request)
+  // }
+  return null
 }
 
 export async function logout(request: Request) {
-  signOut(auth)
-  const session = await storage.getSession(request.headers.get("Cookie"))
-  return redirect("/logg-inn", {
-    headers: {
-      "Set-Cookie": await storage.destroySession(session),
-    },
-  })
+  // signOut(auth)
+  // const session = await storage.getSession(request.headers.get("Cookie"))
+  // return redirect("/logg-inn", {
+  //   headers: {
+  //     "Set-Cookie": await storage.destroySession(session),
+  //   },
+  // })
+  throw new Error("Not implemented!")
 }
 
 export async function createUserSession(
