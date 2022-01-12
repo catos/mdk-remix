@@ -22,7 +22,7 @@ export default function App() {
   const user = useLoaderData()
   
   return (
-    <Document>
+    <Document title="MDK">
       <Layout user={user}>
         <Outlet />
       </Layout>
