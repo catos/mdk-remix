@@ -1,6 +1,6 @@
 import React from "react"
 import Markdown from "markdown-to-jsx"
-import slugify from "~/lib/slugify"
+import slugify from "~/utils/slugify"
 import Timer from "./timer"
 
 type PropsType = {

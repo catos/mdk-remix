@@ -1,5 +1,7 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
 
 datasource db {
   provider             = "mysql"
@@ -8,16 +10,51 @@ datasource db {
   referentialIntegrity = "prisma"
 }
 
-generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
-}
-
 model Recipe {
   id          Int      @id @default(autoincrement())
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   name        String   @db.VarChar(255)
+  image       String   @db.Text
+  description String   @db.Text
+  source      String   @db.Text
+  ingredients String   @db.Text
+  steps       String   @db.Text
+}
+
+model f86daf7_7461_11ec_8e10_ce23568da0d4_20220113110945_del {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+  name        String   @db.VarChar(255)
   image       String
   description String
+  source      String?
+
+  @@map("_4f86daf7_7461_11ec_8e10_ce23568da0d4_20220113110945_del")
+}
+
+model cd5af6ae_745a_11ec_8cf2_a6279e025aad_20220113102309_del {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+  name        String   @db.VarChar(255)
+  image       String
+  description String
+
+  @@map("_cd5af6ae_745a_11ec_8cf2_a6279e025aad_20220113102309_del")
+}
+
+model fcb6ff6d_7464_11ec_8e10_ce23568da0d4_20220113113604_del {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+  name        String   @db.VarChar(255)
+  image       String   @db.Text
+  description String   @db.Text
+  source      String?  @db.Text
+  ingredients String?  @db.Text
+  steps       String?  @db.Text
+
+  @@map("_fcb6ff6d_7464_11ec_8e10_ce23568da0d4_20220113113604_del")
 }

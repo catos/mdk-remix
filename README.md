@@ -1,4 +1,38 @@
-# Welcome to Remix!
+# Prisma
+
+Docs: https://www.prisma.io/docs
+
+## Commands
+
+Add migration:
+`npx prisma migrate dev --name init`
+
+Start studio (browser UI):
+`npx prisma studio`
+
+# Planetscale
+
+Dashboard: https://app.planetscale.com/cskogholt/mdk
+
+Tutorial: https://davidparks.dev/blog/planetscale-deployment-with-prisma/
+
+## Commands
+
+Login:
+`pscale auth login`
+
+Create dev-branches:
+`pscale branch create tutorial-db initial-setup`
+`pscale branch create tutorial-db shadow`
+
+Connect to dev-branches:
+`pscale connect tutorial-db initial-setup --port 3309`
+`pscale connect tutorial-db shadow --port 3310`
+
+Deploy-request:
+`pscale deploy-request create tutorial-db initial-setup`
+
+# Remix
 
 - [Remix Docs](https://remix.run/docs)
 

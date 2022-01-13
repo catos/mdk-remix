@@ -1,5 +1,5 @@
 {
-  "version": "dd4f33a3",
+  "version": "82b69ba7",
   "entry": {
     "module": "/build/entry.client-CDLTVHMQ.js",
     "imports": [
@@ -117,7 +117,7 @@
       "id": "routes/recipes/$slug",
       "parentId": "root",
       "path": "/oppskrifter/:slug",
-      "module": "/build/routes/recipes/$slug-NTZ54TD5.js",
+      "module": "/build/routes/recipes/$slug-BRIMUVRU.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": true,
@@ -127,12 +127,12 @@
       "id": "routes/recipes/index",
       "parentId": "root",
       "path": "/oppskrifter",
-      "module": "/build/routes/recipes/index-RXX6CDF6.js",
+      "module": "/build/routes/recipes/index-6ADLQCUD.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": false,
       "hasErrorBoundary": false
     }
   },
-  "url": "/build/manifest-DD4F33A3.js"
+  "url": "/build/manifest-82B69BA7.js"
 }

@@ -5,8 +5,7 @@ import { db } from "../../../prisma/db.server"
 import { Recipe } from "@prisma/client"
 
 export const loader: LoaderFunction = async () => {
-  // return getRecipes(12)
-  // const data: LoaderData
+  // TODO: const data: LoaderData, check JokesApp
   return await db.recipe.findMany()
 }
 
